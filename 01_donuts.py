@@ -9,9 +9,16 @@ Exemplo: donuts(5) retorna 'Number of donuts: 5'
 e donuts(23) retorna 'Number of donuts: many'
 """
 
+
 def donuts(count):
-    # +++ SUA SOLUÇÃO +++
-    return
+    count = count
+
+    if count < 10:
+        pass
+    else:
+        count = 'many'
+
+    return "Number of donuts: {count}".format(count=count)
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
@@ -37,5 +44,7 @@ if __name__ == '__main__':
     # Testes que verificam o resultado do seu código em alguns cenários.
     test(donuts, 4, 'Number of donuts: 4')
     test(donuts, 9, 'Number of donuts: 9')
+    test(donuts, 9.5, 'Number of donuts: 9.5')
+    test(donuts, 9.99, 'Number of donuts: 9.99')
     test(donuts, 10, 'Number of donuts: many')
     test(donuts, 99, 'Number of donuts: many')
